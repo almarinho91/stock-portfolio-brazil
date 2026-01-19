@@ -9,22 +9,22 @@ from pathlib import Path
 
 st.set_page_config(page_title="Brazilian Stock Portfolio", layout="wide")
 
-st.title("📈 Brazilian Stock Portfolio Optimization")
+st.title("Brazilian Stock Portfolio Optimization")
 st.markdown("This app allows you to explore forecasts and optimized portfolios based on fundamental filtering and time series forecasting.")
 
 # === Sidebar ===
-st.sidebar.header("📁 Data Loading")
+st.sidebar.header("Data Loading")
 data_dir = st.sidebar.text_input("Data folder path", value="data")
 
 # Load available forecast files
 def get_forecast_files():
     folder = Path(data_dir)
     if not folder.exists():
-        st.warning(f"⚠️ Folder '{data_dir}' not found.")
+        st.warning(f"Folder '{data_dir}' not found.")
         return []
     files = list(folder.glob("forecast_*.csv"))
     if not files:
-        st.warning("⚠️ No forecast_*.csv files found in the folder.")
+        st.warning("No forecast_*.csv files found in the folder.")
     return [f.name for f in files]
 
 forecast_files = get_forecast_files()
@@ -88,11 +88,11 @@ if selected_files:
             st.subheader(ticker)
             fig = px.line(df, x='ds', y='yhat', title=f"Forecast for {ticker}")
             st.plotly_chart(fig, use_container_width=True)
-            st.metric("📈 Expected Return", f"{expected_return:.2%}")
-            st.metric("⚠️ Volatility", f"{volatility:.2%}")
+            st.metric("Expected Return", f"{expected_return:.2%}")
+            st.metric("Volatility", f"{volatility:.2%}")
 
     # === Portfolio Section ===
-    st.header("📊 Equal-weighted Portfolio Summary")
+    st.header("Equal-weighted Portfolio Summary")
 
     if expected_returns:
         n = len(expected_returns)
@@ -112,7 +112,7 @@ if selected_files:
         st.plotly_chart(fig, use_container_width=True)
 
         # === Optimized Portfolio Section ===
-        st.header("🧠 Markowitz Optimized Portfolio")
+        st.header("Markowitz Optimized Portfolio")
         df_opt, metrics = markowitz_optimize(expected_returns, volatilities)
 
         # Format only when displaying
