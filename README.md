@@ -1,15 +1,15 @@
-# 📊 Data-Driven Stock Portfolio Optimization (Brazil)
+# Data-Driven Stock Portfolio Optimization (Brazil)
 
 This project demonstrates a complete data science workflow for building an optimized stock portfolio for the Brazilian market using a mix of:
 
-- ✨ Fundamental analysis (via Fundamentus)
-- 🌐 Market data (via Yahoo Finance)
-- ⏰ Time-series forecasting (via Facebook Prophet)
-- 📈 Modern Portfolio Theory (Markowitz Optimization)
+- Fundamental analysis (via Fundamentus)
+- Market data (via Yahoo Finance)
+- Time-series forecasting (via Facebook Prophet)
+- Modern Portfolio Theory (Markowitz Optimization)
 
 ---
 
-## 👤 Who is this for?
+## Who is this for?
 
 This project is designed for:
 
@@ -19,7 +19,7 @@ This project is designed for:
 
 ---
 
-## 🌍 Overview
+## Overview
 
 | Notebook                          | Description                                                  |
 |----------------------------------|--------------------------------------------------------------|
@@ -32,13 +32,13 @@ This project is designed for:
 
 ---
 
-## ❓ Problem Statement
+## Problem Statement
 
 > “Based on real and forecasted data, how can we choose the **best stocks to invest in**, and in **what proportion**?”
 
 ---
 
-## 🧪 Requirements
+## Requirements
 
 To run this project:
 
@@ -48,8 +48,8 @@ conda activate datasci
 pip install -r requirements.txt
 ```
 
-## 🧠 Key Concepts
-## ✅ Fundamental Filtering
+## Key Concepts
+## Fundamental Filtering
 - Return on Equity > 10%
 
 - Dividend Yield > 3%
@@ -58,26 +58,26 @@ pip install -r requirements.txt
 
 - Debt/Equity < 1
 
-## ⏳ Forecasting with Prophet
+## Forecasting with Prophet
 - Predicts stock prices using historical trends
 
 - Calculates projected return and volatility
 
-## 📊 Markowitz Optimization
+## Markowitz Optimization
 
 Builds optimal portfolio allocation by:
 
 - Maximizing Sharpe Ratio
 - Minimizing overall volatility
 
-## 🎯 Results
+## Results
 - The optimizer allocates capital based on forecasted performance.
 
 - You get weights per stock and a visual of the efficient frontier.
 
 - Example: if DIRR3.SA has 91% weight, it’s the model’s strongest performer
 
-## 🌐 (Optional) Streamlit App
+## (Optional) Streamlit App
 The app allows you to:
 
 - Visualize forecast results
@@ -90,6 +90,6 @@ The app allows you to:
 streamlit run app.py
 ```
 
-## 🧾 License
+## License
 This project is open for educational and portfolio use. No license has been applied — feel free to fork or adapt.
 
